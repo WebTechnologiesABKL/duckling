@@ -13,7 +13,7 @@ ADD . .
 
 ENV LANG=C.UTF-8
 
-RUN stack setup
+RUN stack setup -j1
 
 # NOTE:`stack build` will use as many cores as are available to build
 # in parallel. However, this can cause OOM issues as the linking step
